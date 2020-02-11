@@ -1,318 +1,57 @@
 # BeatBox ![](src/com/demsasha/resources/images/logo.png) 
-### Features
+**BeatBox** - это десктопное приложение для командной разработки музыкальных треков в формате MIDI.
 
-- Support Standard Markdown / CommonMark and GFM(GitHub Flavored Markdown);
-- Full-featured: Real-time Preview, Image (cross-domain) upload, Preformatted text/Code blocks/Tables insert, Code fold, Search replace, Read only, Themes, Multi-languages, L18n, HTML entities, Code syntax highlighting...;
-- Markdown Extras : Support ToC (Table of Contents), Emoji, Task lists, @Links...;
-- Compatible with all major browsers (IE8+), compatible Zepto.js and iPad;
-- Support identification, interpretation, fliter of the HTML tags;
-- Support TeX (LaTeX expressions, Based on KaTeX), Flowchart and Sequence Diagram of Markdown extended syntax;
-- Support AMD/CMD (Require.js & Sea.js) Module Loader, and Custom/define editor plugins;
-
-# Editor.md
-
-![](https://pandao.github.io/editor.md/images/logos/editormd-logo-180x180.png)
-
-![](https://img.shields.io/github/stars/pandao/editor.md.svg) ![](https://img.shields.io/github/forks/pandao/editor.md.svg) ![](https://img.shields.io/github/tag/pandao/editor.md.svg) ![](https://img.shields.io/github/release/pandao/editor.md.svg) ![](https://img.shields.io/github/issues/pandao/editor.md.svg) ![](https://img.shields.io/bower/v/editor.md.svg)
+Главное предначначение приложения - **создание музыки**
 
 
-**Table of Contents**
+>Это простой музыкальный редактор способный *синтезировать* звуки *разнообразных* музыкальных инструментов. 
 
-[TOCM]
+**В самом простом случае** после запуска программы пользователь может  выбрать музыкальный **инструмент**, **ноту** и **такты**, в момент которых будет воспроизводиться звук (**такты**). После нажатия на кнопку **старт**, пользователь услышит мелодию, которую только что сам создал.
 
-[TOC]
+![](src/com/demsasha/resources/images/instruments.png)
 
-#H1 header
-##H2 header
-###H3 header
-####H4 header
-#####H5 header
-######H6 header
-#Heading 1 link [Heading link](https://github.com/pandao/editor.md "Heading link")
-##Heading 2 link [Heading link](https://github.com/pandao/editor.md "Heading link")
-###Heading 3 link [Heading link](https://github.com/pandao/editor.md "Heading link")
-####Heading 4 link [Heading link](https://github.com/pandao/editor.md "Heading link") Heading link [Heading link](https://github.com/pandao/editor.md "Heading link")
-#####Heading 5 link [Heading link](https://github.com/pandao/editor.md "Heading link")
-######Heading 6 link [Heading link](https://github.com/pandao/editor.md "Heading link")
+### Это только начало!
 
-##Headers (Underline)
+Пользователь может создать до 15 музыкальных дорожек, которые будут параллельно воспроизводить свои уникальные звуки. Длина трека ограничивается 100 тактами. Есть возможность настроить длительность ноты и темп. Таким образом данное приложение способно синтезировать достаточно сложные и большие музыкальные треки.
 
-H1 Header (Underline)
-=============
+![](src/com/demsasha/resources/images/workZone.png)
 
-H2 Header (Underline)
--------------
+Попробуйте сами выбрать свой любимый музыкальный инструмент и создать приятную мелодию, а после экспортировать ее в формат “*.mid*”, который воспроизводится большинством проигрывателей.
 
-###Characters
-                
-----
+### Одна из главных особенностей! 
+**Коллективная разработка**. 
 
-~~Strikethrough~~ <s>Strikethrough (when enable html tag decode.)</s>
-*Italic*      _Italic_
-**Emphasis**  __Emphasis__
-***Emphasis Italic*** ___Emphasis Italic___
-
-Superscript: X<sub>2</sub>，Subscript: O<sup>2</sup>
-
-**Abbreviation(link HTML abbr tag)**
-
-The <abbr title="Hyper Text Markup Language">HTML</abbr> specification is maintained by the <abbr title="World Wide Web Consortium">W3C</abbr>.
-
-###Blockquotes
-
-> Blockquotes
-
-Paragraphs and Line Breaks
-                    
-> "Blockquotes Blockquotes", [Link](http://localhost/)。
-
-###Links
-
-[Links](http://localhost/)
-
-[Links with title](http://localhost/ "link title")
-
-`<link>` : <https://github.com>
-
-[Reference link][id/name] 
-
-[id/name]: http://link-url/
-
-GFM a-tail link @pandao
-
-###Code Blocks (multi-language) & highlighting
-
-####Inline code
-
-`$ npm install marked`
-
-####Code Blocks (Indented style)
-
-Indented 4 spaces, like `<pre>` (Preformatted Text).
-
-    <?php
-        echo "Hello world!";
-    ?>
-    
-Code Blocks (Preformatted text):
-
-    | First Header  | Second Header |
-    | ------------- | ------------- |
-    | Content Cell  | Content Cell  |
-    | Content Cell  | Content Cell  |
-
-####Javascript　
-
-```javascript
-function test(){
-	console.log("Hello world!");
-}
+ В программе есть свой **встроенный чат**, который позволяет пользователям программы общаться между собой и делиться созданными треками. 
  
-(function(){
-    var box = function(){
-        return box.fn.init();
-    };
+ Таким образом можно коллективно вносить изменения в один трек, добавляя в него новые музыкальные инструменты и звуки и улучшая имеющиеся.
 
-    box.prototype = box.fn = {
-        init : function(){
-            console.log('box.init()');
+![](src/com/demsasha/resources/images/chat.png)
 
-			return this;
-        },
+###Возможности 
+В правом углу программы располагается функциональная панель, которая реализует следующие возможности: 
 
-		add : function(str){
-			alert("add", str);
 
-			return this;
-		},
 
-		remove : function(str){
-			alert("remove", str);
+    1.	Запуск и остановка созданного трека, кнопка при нажатии меняет название на «Стоп»
+    2.	Указание, с какого такта запустить трек, для более удобной разработки;
+    3.	Указание запускать ли анимационную игру или просто прослушать созданный трек;
+    4.	Выбор длительности ноты (4, 8, 16, 32);
+    5.	Увеличение и уменьшение темпа;
+    6.	Выбор примера создаваемого трека;
+    7.	Очистить рабочую зону, убрав все настройки;
+    8.	Сохранить или загрузить трек (для сохранения создается файл с форматом .bbx);
+    9.	Экспорт в midi-файл. Кнопка открывает дочернее окно выбора настроек и экспорта;
+    10.	  Для более удобного выбора номера ноты открывается окно с таблицей, по которой можно ориентироваться
 
-			return this;
-		}
-    };
-    
-    box.fn.init.prototype = box.fn;
-    
-    window.box =box;
-})();
+![](src/com/demsasha/resources/images/buttoms1.png)
 
-var testBox = box();
-testBox.add("jQuery").remove("jQuery");
-```
+###  Приятный бонус! 
 
-####HTML code
+**Анимационная мини игра**. Если при запуске трека нажать на CheckBox «Анимация», то запустится Анимационная мини игра *«Космос»* 
 
-```html
-<!DOCTYPE html>
-<html>
-    <head>
-        <mate charest="utf-8" />
-        <title>Hello world!</title>
-    </head>
-    <body>
-        <h1>Hello world!</h1>
-    </body>
-</html>
-```
+![](src/com/demsasha/resources/images/animation.png)
+>При воспроизведении каждого звука будет генерироваться красивая абстрактная окружность на темно синем фоне. Вы можете насладиться получившийся на основе вашего трека картинкой или начать уничтожать окружности, нажимая на них.
 
-###Images
-
-Image:
-
-![](src\com\demsasha\resources\images\GIF.gif)
-
-> Follow your heart.
-
-![]()
-
-> 图为：厦门白城沙滩 Xiamen
-
-图片加链接 (Image + Link)：
-
-[![](https://pandao.github.io/editor.md/examples/images/7.jpg)](https://pandao.github.io/editor.md/examples/images/7.jpg "李健首张专辑《似水流年》封面")
-
-> 图为：李健首张专辑《似水流年》封面
-                
-----
-
-###Lists
-
-####Unordered list (-)
-
-- Item A
-- Item B
-- Item C
-     
-####Unordered list (*)
-
-* Item A
-* Item B
-* Item C
-
-####Unordered list (plus sign and nested)
-                
-+ Item A
-+ Item B
-    + Item B 1
-    + Item B 2
-    + Item B 3
-+ Item C
-    * Item C 1
-    * Item C 2
-    * Item C 3
-
-####Ordered list
-                
-1. Item A
-2. Item B
-3. Item C
-                
-----
-                    
-###Tables
-                    
-First Header  | Second Header
-------------- | -------------
-Content Cell  | Content Cell
-Content Cell  | Content Cell 
-
-| First Header  | Second Header |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
-
-| Function name | Description                    |
-| ------------- | ------------------------------ |
-| `help()`      | Display the help window.       |
-| `destroy()`   | **Destroy your computer!**     |
-
-| Item      | Value |
-| --------- | -----:|
-| Computer  | $1600 |
-| Phone     |   $12 |
-| Pipe      |    $1 |
-
-| Left-Aligned  | Center Aligned  | Right Aligned |
-| :------------ |:---------------:| -----:|
-| col 3 is      | some wordy text | $1600 |
-| col 2 is      | centered        |   $12 |
-| zebra stripes | are neat        |    $1 |
-                
-----
-
-####HTML entities
-
-&copy; &  &uml; &trade; &iexcl; &pound;
-&amp; &lt; &gt; &yen; &euro; &reg; &plusmn; &para; &sect; &brvbar; &macr; &laquo; &middot; 
-
-X&sup2; Y&sup3; &frac34; &frac14;  &times;  &divide;   &raquo;
-
-18&ordm;C  &quot;  &apos;
-
-##Escaping for Special Characters
-
-\*literal asterisks\*
-
-##Markdown extras
-
-###GFM task list
-
-- [x] GFM task list 1
-- [x] GFM task list 2
-- [ ] GFM task list 3
-    - [ ] GFM task list 3-1
-    - [ ] GFM task list 3-2
-    - [ ] GFM task list 3-3
-- [ ] GFM task list 4
-    - [ ] GFM task list 4-1
-    - [ ] GFM task list 4-2
-
-###Emoji mixed :smiley:
-
-> Blockquotes :star:
-
-####GFM task lists & Emoji & fontAwesome icon emoji & editormd logo emoji :editormd-logo-5x:
-
-- [x] :smiley: @mentions, :smiley: #refs, [links](), **formatting**, and <del>tags</del> supported :editormd-logo:;
-- [x] list syntax required (any unordered or ordered list supported) :editormd-logo-3x:;
-- [x] [ ] :smiley: this is a complete item :smiley:;
-- [ ] []this is an incomplete item [test link](#) :fa-star: @pandao; 
-- [ ] [ ]this is an incomplete item :fa-star: :fa-gear:;
-    - [ ] :smiley: this is an incomplete item [test link](#) :fa-star: :fa-gear:;
-    - [ ] :smiley: this is  :fa-star: :fa-gear: an incomplete item [test link](#);
-            
-###TeX(LaTeX)
-   
-$$E=mc^2$$
-
-Inline $$E=mc^2$$ Inline，Inline $$E=mc^2$$ Inline。
-
-$$\(\sqrt{3x-1}+(1+x)^2\)$$
-                    
-$$\sin(\alpha)^{\theta}=\sum_{i=0}^{n}(x^i + \cos(f))$$
-                
-###FlowChart
-
-```flow
-st=>start: Login
-op=>operation: Login operation
-cond=>condition: Successful Yes or No?
-e=>end: To admin
-
-st->op->cond
-cond(yes)->e
-cond(no)->op
-```
-
-###Sequence Diagram
-                    
-```seq
-Andrew->China: Says Hello 
-Note right of China: China thinks\nabout it 
-China-->Andrew: How are you? 
-Andrew->>China: I am good thanks!
-```
-
-###End
+### Downland 
++ [BeatBox.jar](http://localhost/) – можете скачать тут
++ [Server.jar](http://localhost/) – можете скачать тут (для работы чата необходимо запустить сервер, сервер лучше запускать через командную строку)
